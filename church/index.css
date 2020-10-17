@@ -16,7 +16,7 @@ ul{
 .app{
     width: 100vw;
 }
-.hide{
+.hide, .hide-mobile{
     display: none;
 }
 header{
@@ -211,16 +211,22 @@ footer{
     align-content: center;
     text-align: center;
     padding: 1rem 0;
+    margin-top: -5px;
 }
 a{
     text-decoration: none;
     color: #222F33;
 }
+.hide-d{display: none;}
 .join{
     border: 1px solid #222F33;
     padding: .5rem 2rem ;
     border-radius: 8px;
     background: white;
+}
+.button-cont{
+    text-align: center;
+    padding: 7rem 0;
 }
 input:not(.join){
     padding: .875rem;
@@ -239,7 +245,7 @@ input:focus{
     input:focus{
         outline: 3px solid teal;
     }
-    #menu, #close{
+    #menu, #close, .bg-hide{
         display: none;
     }
     .logo {
@@ -252,23 +258,20 @@ input:focus{
         margin: auto;
         justify-content: space-between;
         padding-top: 1rem;
-        /* border: 1px solid white; */
         box-sizing: border-box;
     }
     .open-nav{
         flex-direction: row;
         display: flex;
-        width: 65%;
+        width: 85%;
         position: unset;
         margin-left: -3rem;
-        /* border: 1px solid white; */
         height: unset;
     }
     .nav-out{
         animation-name: none;
         background: unset;        
     }.open-nav li:not(.active) a{
-        /* width: 35%; */
         color: white;
         font-size: 1.25rem;
     }
@@ -323,23 +326,75 @@ input:focus{
     }
 }
 @media screen and (min-width:1020px){
+    .hide-d{
+        display: flex;
+    }
     .open-nav{
         background: unset;
-        width: 50%;
+        width: 56%;
     }
     .top-text{
         top: 40rem;
     }
-    .text{
+    main .text{
         width: 50%;
         padding: 3rem 1rem;
     }
-    .top{
+    .button-cont{
+        width: 71rem;
+        text-align: center;
+        position: absolute;
+        top: -9rem;
+    }
+    .open-nav li:not(.close-container) {
+        border: 1px solid #222F33;
+        padding: .5rem .5rem;
+        margin: 0 3px;
+        border-radius: 8px;
+    }
+    main .top, .mid, .bottom{
         display: flex;
         flex-direction: row;
     }
     .hide-mobile{
         display: flex;
         width: 50%;
+        padding: 3rem;
+        position: relative;
+        /* box-sizing: border-box; */
+    }
+    .image{
+        width: 75%;
+    }
+    .image::before{
+        content: "";
+        width: 29rem;
+        height: 20rem;
+        background: #222F33;
+        position: absolute;
+        top: 1rem;
+        left: 6rem;
+        z-index: 0;
+        border-radius: 5px;
+    }
+    .details, .mid-text{
+        width: 50%;
+        margin: 0;
+    }
+    .bottom .hide-mobile{
+        padding: 3rem 0;
+    }
+    .mid .hide-mobile{
+        margin: 0;
+    }
+    .mid .image::before{
+        background: white;
+        left: 10rem;
+        top: 0;        
+    }
+    
+    .mid-text p{
+        width: 80%;
+        margin: auto;
     }
 }

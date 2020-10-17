@@ -3,36 +3,62 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Church | Landing page</title>
+    <title>Church | BetterNigeria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
     <div class="app">
-        <img src="./image/bg-img-praying.jpg" alt="bg-image">
+        <header>            
+            <div class="bg-image">
+                <img class="hide-d" src="./image/image-5.jpg"
+                    alt="header-bg" 
+                >
+                <img class="bg-hide" src="./image/image-4.jpg" alt="">
+            </div>         
 
-        <div class="body">
-            <nav>
-                <div class="logo">
-                    //logo stuff
+            <section class="header-texts">
+                <nav>
+                    <div class="logo">
+                        <p>
+                            <img src="./image/logo.svg" alt="church-logo">
+                        </p>
+                        <p id="menu">
+                            <img src="./image/icon-hamburger.svg" alt="menu">
+                        </p>                
+                    </div>
+    
+                    <ul class="open-nav">
+                        <li>
+                            <a href="about.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="better.html">Better Nigeria</a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">Messages</a>
+                        </li>
+                        <li class="close-container">
+                            <img class="" src="./image/icon-close.svg" alt="close" id="close">
+                        </li>              
+                            
+                    </ul>
+                </nav>
+                <div class="top-text">
+                        <p class="button-cont"><button class="join"><a href="/register.html">join</a></button></p>
                 </div>
-
-                <ul>
-                    <li><a href="/about.html">About us</a></li>
-                    <li><a href="/contact.html">Contact us</a></li>
-                    <li><a href="#">Better Nigeria</a></li>
-                    <li class="active"><a href="/index.html">Messages</a></li>
-                </ul>
-            </nav>
-
-            <div class="main">
-                <p>An Educative session on</p>
-                <p>Staying Focus in Times of Pressing issues for a better System in Nigeria</p>
-                <p><span>Date: 19/06/2020</span> <span>Time: 8:00am - 4:00pm</span></p>
-
-                <button type="submit"><a href="/register.html">Register</a></button>
-            </div>
-        </div>
+                
+            </section>
+        </header>
+        <footer>
+            <p title="email">info@churchpilgrimage.com</p>
+            <!-- <p><img src="./image/logo.svg" alt="church-logo"></p> -->
+            <p><button class="join"><a href="/register.html">join</a></button></p>
+        </footer>
     </div>    
+    <script src="/index.js"></script>    
 </body>
 </html>
