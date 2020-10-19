@@ -79,16 +79,14 @@ WSGI_APPLICATION = 'pilgrimage.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+import dj_database_url
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env.str('NAME'),
-        'USER': env.str('USER'),
-        'PASSWORD': env.str('PASSWORD'),
-        'HOST': 'localhost'
-    }
+    'default': dj_database_url.config(default=env.str('DATABASE_URL'))  
 }
+
+ 
+
 
 
 # Password validation
