@@ -31,7 +31,7 @@ SECRET_KEY = env.str('SECRET_KEY')
 DEBUG = int(env.str('DEBUG'))
 
 
-ALLOWED_HOSTS = ['pilgrimmiraclechurch.org', 'herokudjangoapp.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['pilgrimmiraclechurch.org', 'herokudjangoapp.herokuapp.com', 'localhost', 'pilgrim-church.herokuapp.com']
 
 
 # Application definition
