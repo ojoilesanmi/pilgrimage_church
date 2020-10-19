@@ -1,0 +1,135 @@
+{% extends 'base.html'%}
+
+{% block content%}
+{% load static %}
+
+
+    <div class="app">
+        <!-- <img src="./image/bg-img-praying.jpg" alt="bg-image"> -->
+        <header>            
+            <div class="bg-image">
+                <img src="{% static 'img/image-5.jpg'%}" alt="header-bg">
+            </div>         
+
+            <section class="header-texts">
+                <nav>
+                    <div class="logo">
+                        <p>
+                            <img src="{% static 'img/logo.svg'%} alt="church-logo">
+                        </p>
+                        <p id="menu">
+                            <img src="{% static 'image/icon-hamburger.svg'%} alt="menu">
+                        </p>                
+                    </div>
+    
+                    <ul class="open-nav">
+                        <li>
+                            <a href="about.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'better_nigeria' %}">Better Nigeria</a>
+                        </li>
+                        <li class="active">
+                            <a href="index.html">Messages</a>
+                        </li>
+                        <li class="close-container">
+                            <img class="" src="{% static 'img/icon-close.svg'%}" alt="close" id="close">
+                        </li>              
+                            
+                    </ul>
+                </nav>
+                <div class="top-text">
+                    <p>
+                        Worship Center
+                    </p>
+                    <p>
+                        Always a reason to Serve the Lord, 
+                        Join us as we  experience High Worship of Praise.
+                    </p>
+                </div>
+                
+            </section>
+        </header>
+        <main>
+            <section class="top">
+                <div class="text">
+                    <h2>Mission</h2>
+                    <p>
+                        Raising the total man, set him in order and see the glory of God revealed in him
+                    </p>
+                    <button class="join"><a href="register.html">join</a></button>
+                </div>
+                <div class="hide-mobile">
+                    <div class="image">
+                        <img src="{% static 'img/image-3.jpg'%}" alt="church image">
+                    </div>
+                </div>
+            </section>
+            <section class="mid">                
+                <div class="hide-mobile">
+                    <div class="image">
+                        <img src="{% static 'img/image-1.jpg'%}" alt="church image">
+                    </div>
+                </div>
+                <div class="mid-text">
+                    <p>The experience</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Perferendis vero, 
+                        asperiores excepturi at temporibus tenetur
+                        fuga atque voluptate officia, culpa obcaecati,
+                        quia vitae ab inventore quas praesentium 
+                        similique dicta ullam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Mollitia sint dolorem 
+                        ratione! Ipsam commodi accusamus explicabo 
+                        quam quod dicta aperiam culpa eum reiciendis 
+                        necessitatibus, amet architecto voluptatem 
+                        voluptates fugit nostrum!
+                    </p>
+                </div>
+            </section>
+            <section class="bottom">
+                <div class="details">
+                    <ul>
+                        <li>
+                            <p>Address</p>
+                            <p>33, Oremeji Street, Off Ososami, Oke Ado, Ibadan Oyo State.</p>
+                        </li>
+                        <li>
+                            <p>Sunday Service</p>
+                            <p>First Service: 9:00am - 10:30am, Second Service: 10:30am - 12:00pm</p>
+                        </li>
+                        <li>
+                            <p>Power Encounter </p>
+                            <p>1st, 2nd and 3rd day of the month</p>
+                        </li>
+                        <li>
+                            <p>Midweek Service </p>
+                            <p>33, Oremeji Street, Off Ososami, Oke Ado, Ibadan Oyo State.</p>
+                        </li>
+                        <li>
+                            <p>Vigil </p>
+                            <p>Miracle Night 11pm - 3am</p>
+                        </li>
+                    </ul>
+                </div>                
+                <div class="hide-mobile">
+                        <div class="image">
+                            <img src="{% static 'img/image-6.jpg'%}" alt="church image">
+                        </div>
+                    </div>
+            </section>
+        </main>
+           <footer>
+                <p title="email">info@churchpilgrimage.com</p>
+                <!-- <p><img src="./image/logo.svg" alt="church-logo"></p> -->
+                <p><button class="join"><a href="/register.html">join</a></button></p>
+            </footer>
+    </div>    
+{% endblock %}
