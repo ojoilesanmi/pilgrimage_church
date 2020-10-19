@@ -17,7 +17,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env()
 env_file = os.path.join(BASE_DIR, '.env')
-environ.Env.read_env(env_file)
+if os.path.exists(env_file):
+    environ.Env.read_env(env_file)
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,9 +28,10 @@ environ.Env.read_env(env_file)
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG')
+DEBUG = int(env.str('DEBUG'))
 
-ALLOWED_HOSTS = ['pilgrimmiraclechurch.org', 'herokudjangoapp.herokuapp.com']
+
+ALLOWED_HOSTS = ['pilgrimmiraclechurch.org', 'herokudjangoapp.herokuapp.com', 'localhost']
 
 
 # Application definition
