@@ -1,28 +1,32 @@
+{% comment %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
 <nav>
     <div class="logo">
         <p>
-            <img src="./image/logo.svg" alt="church-logo">
+            <img src="{% static 'img/logo.jpg'%}" alt="church-logo">
         </p>
         <p id="menu">
-            <img src="./image/icon-hamburger.svg" alt="menu">
+            <img src="{% static 'img/icon-hamburger.svg'%}" alt="menu">
         </p>                
     </div>
     
     <ul class="open-nav nav-out">
         <li>
-            <a href="about.html">About us</a>
+            <a href="{% url 'about'%}">About us</a>
         </li>
         <li>
-            <a href="contact.html">Contact us</a>
+            <a href="{% url 'contact'%}">Contact us</a>
         </li>
         <li>
-            <a href="better.html">Better Nigeria</a>
+            <a href="{% url 'better_nigeria'%}">Better Nigeria</a>
         </li>
         <li class="active">
             <a href="index.html">Messages</a>
         </li>
         <li class="close-container">
-            <img class="" src="./image/icon-close.svg" alt="close" id="close">
+            <img class="" src="{% static 'img/icon-close.svg'%}" alt="close" id="close">
         </li>     
     </ul>
-</nav>
+</nav> {% endcomment %}

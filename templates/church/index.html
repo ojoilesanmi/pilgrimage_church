@@ -15,19 +15,19 @@
                 <nav>
                     <div class="logo">
                         <p>
-                            <img src="{% static 'img/logo.svg'%} alt="church-logo">
+                            <img src="{% static 'img/logo.jpg'%}" alt="church-logo">
                         </p>
                         <p id="menu">
-                            <img src="{% static 'image/icon-hamburger.svg'%} alt="menu">
+                            <img src="{% static 'img/icon-hamburger.svg'%}" alt="menu">
                         </p>                
                     </div>
     
                     <ul class="open-nav">
                         <li>
-                            <a href="about.html">About us</a>
+                            <a href="{% url 'about'%}">About us</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact us</a>
+                            <a href="{% url 'contact'%}">Contact us</a>
                         </li>
                         <li>
                             <a href="{% url 'better_nigeria' %}">Better Nigeria</a>
@@ -60,7 +60,7 @@
                     <p>
                         Raising the total man, set him in order and see the glory of God revealed in him
                     </p>
-                    <button class="join"><a href="register.html">join</a></button>
+                    <button class="join"><a href="{% url 'registration'%}">join</a></button>
                 </div>
                 <div class="hide-mobile">
                     <div class="image">
@@ -126,10 +126,6 @@
                     </div>
             </section>
         </main>
-           <footer>
-                <p title="email">info@churchpilgrimage.com</p>
-                <!-- <p><img src="./image/logo.svg" alt="church-logo"></p> -->
-                <p><button class="join"><a href="/register.html">join</a></button></p>
-            </footer>
+           
     </div>    
 {% endblock %}

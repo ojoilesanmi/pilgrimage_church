@@ -7,6 +7,9 @@ from django.conf import settings
 urlpatterns = [
     path('', views.index, name='index'),
     path('better_nigeria', views.better_nigeria, name='better_nigeria'),
-    path('registration', views.registration, name='registration')
+    path('contact', views.contact, name='contact'),
+    path('about', views.about, name='about'),
+    path('messages', views.messages, name='messages'),
+    path('registration', views.registration, name='registration'),
     
 ]

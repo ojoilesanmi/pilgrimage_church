@@ -10,6 +10,14 @@ def index(request):
 def better_nigeria(request):
     return render(request, 'church/better.html')
     
+def about(request):
+    return render(request, 'church/about.html')
+
+def contact(request):
+    return render(request, 'church/contact.html')
+    
+def messages(request):
+    return render(request, 'church/messages.html')
 
 def registration(request):
     if request.method == 'POST':
