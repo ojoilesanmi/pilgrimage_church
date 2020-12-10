@@ -3,11 +3,53 @@
 {% block content%}
 {% load static %}
 
-    <div class="main">
-        <p>An Educative session on</p>
-        <p>Staying Focus in Times of Pressing issues for a better System in Nigeria</p>
-        <p><span>Date: 19/06/2020</span> <span>Time: 8:00am - 4:00pm</span></p>
+ <header>
+         <div class="bg-image">
+                <img src="{% static 'img/image-5.jpg'%}" alt="header-bg">
+         </div>  
+            <section class="header-texts" style="padding-top: 1rem;">
+                <nav style="padding-top: 1rem;">
+                    <div class="logo">
+                        <h3 style="border: 2px solid teal;
+                                padding: 0.38rem;
+                                border-radius: 5px;">
+                            PMC
+                            {% comment %} <img src="{% static 'img/logo.jpg'%}" alt="church-logo"> {% endcomment %}
+                        </h3>
+                        <p id="menu">
+                            <img src="{% static 'img/icon-hamburger.svg'%}" alt="menu">
+                        </p>                
+                    </div>
+    
+                    <ul class="open-nav">
+                        <li>
+                            <a href="{% url 'about'%}">About us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact'%}">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'better_nigeria' %}">Better Nigeria</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'messages' %}">Messages</a>
+                        </li>
+                        <li class="close-container">
+                            <img class="" src="{% static 'img/icon-close.svg'%}" alt="close" id="close">
+                        </li>              
+                            
+                    </ul>
+                </nav>
+            </section>
 
-        <button type="button"><a href="{% url 'registration' %}">Register</a></button>
+        </header>
+
+
+    <div class="main" style="display: flex; flex-direction:column; border: 1px solid #222F33; width: min(80%, 700px); margin: auto; padding:0 1rem; border-radius: 5px; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
+        <p style="display: flex; flex-direction: row; width: max-content;"><span style="padding: .75rem; background: #222F33; font-weight: bold; color: white;">BETTER NIGERIA CONFERENCE: </span><span style="padding: .75rem; font-size: .8rem;"> AN ANNUAL NATION BUILDING CONFERENCE SECOND EDITION </span></p>
+        <p  style="display: flex; flex-direction: row; width: max-content;"><span style="padding: .75rem; background: #222F33; font-weight: bold; color: white;">THEME: </span><span style="padding: .75rem; font-size: .8rem;"> CRUSHING CORRUPTION For SIGNIFICANT NATIONAL GROWTH </span></p>
+        <p  style="display: flex; flex-direction: row; width: max-content;"><span style="padding: .75rem; background: #222F33; font-weight: bold; color: white;">Date: 12th December, 2020</span> <span <span style="padding: .75rem; font-size: .8rem;">>Time: 10:00am - 3:00pm</span></p>
+
+        <button type="button" style="background-color: #222F33; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px; width: 30%; margin: auto;"><a href="{% url 'registration' %}">Register</a></button>
     </div> 
 {% endblock %} 

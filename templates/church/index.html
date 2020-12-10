@@ -4,6 +4,7 @@
 {% load static %}
 
 
+
     <div class="app">
         <!-- <img src="./image/bg-img-praying.jpg" alt="bg-image"> -->
         <header>            
@@ -11,12 +12,15 @@
                 <img src="{% static 'img/image-5.jpg'%}" alt="header-bg">
             </div>         
 
-            <section class="header-texts">
-                <nav>
+            <section class="header-texts" style="padding-top: 1rem;">
+                <nav style="padding-top: 1rem;">
                     <div class="logo">
-                        <p>
-                            <img src="{% static 'img/logo.jpg'%}" alt="church-logo">
-                        </p>
+                        <h3 style="border: 2px solid teal;
+                                padding: 0.38rem;
+                                border-radius: 5px;">
+                            PMC
+                            {% comment %} <img src="{% static 'img/logo.jpg'%}" alt="church-logo"> {% endcomment %}
+                        </h3>
                         <p id="menu">
                             <img src="{% static 'img/icon-hamburger.svg'%}" alt="menu">
                         </p>                
@@ -32,8 +36,8 @@
                         <li>
                             <a href="{% url 'better_nigeria' %}">Better Nigeria</a>
                         </li>
-                        <li class="active">
-                            <a href="index.html">Messages</a>
+                        <li>
+                            <a href="{% url 'messages' %}">Messages</a>
                         </li>
                         <li class="close-container">
                             <img class="" src="{% static 'img/icon-close.svg'%}" alt="close" id="close">
@@ -51,8 +55,10 @@
                     </p>
                 </div>
                 
-            </section>
-        </header>
+        </section>
+</header>
+        
+    
         <main>
             <section class="top">
                 <div class="text">
