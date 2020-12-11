@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+     <header>
+         <div class="bg-image">
+                <img src="{% static 'img/image-5.jpg'%}" alt="header-bg">
+         </div>  
+            <section class="header-texts" style="padding-top: 1rem;">
+                <nav style="padding-top: 1rem;">
+                    <div class="logo">
+                        <h3 style="border: 2px solid teal;
+                                padding: 0.38rem;
+                                border-radius: 5px;">
+                            PMC
+                            {% comment %} <img src="{% static 'img/logo.jpg'%}" alt="church-logo"> {% endcomment %}
+                        </h3>
+                        <p id="menu">
+                            <img src="{% static 'img/icon-hamburger.svg'%}" alt="menu">
+                        </p>                
+                    </div>
+    
+                    <ul class="open-nav">
+                        <li>
+                            <a href="{% url 'about'%}">About us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact'%}">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'better_nigeria' %}">Better Nigeria</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'messages' %}">Messages</a>
+                        </li>
+                        <li class="close-container">
+                            <img class="" src="{% static 'img/icon-close.svg'%}" alt="close" id="close">
+                        </li>              
+                            
+                    </ul>
+                </nav>
+            </section>
+
+        </header>
+
+
+    <div class="main better_div" >
+        <p><span class="rSpan">BETTER NIGERIA CONFERENCE: </span><span class="txt"> AN ANNUAL NATION BUILDING CONFERENCE SECOND EDITION </span></p>
+        <p><span class="rSpan">THEME: </span><span class="txt"> CRUSHING CORRUPTION FOR SIGNIFICANT NATIONAL GROWTH </span></p>
+        <p><span class="rSpan">Date: 12th December, 2020</span> <span class="txt">Time: 10:00am - 3:00pm</span></p>
+
+        <button id="summit-btn" type="button"><a href="{% url 'registration' %}" class="reg">Register</a></button>
+    </div> 
+</body>
+</html>
+
