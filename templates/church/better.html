@@ -3,6 +3,7 @@
 {% block content%}
 {% load static %}
 
+
  <header>
          <div class="bg-image">
                 <img src="{% static 'img/image-5.jpg'%}" alt="header-bg">
@@ -13,7 +14,7 @@
                         <h3 style="border: 2px solid teal;
                                 padding: 0.38rem;
                                 border-radius: 5px;">
-                            PMC
+                            <a href="{% url 'index'%}"> PMC </a>
                             {% comment %} <img src="{% static 'img/logo.jpg'%}" alt="church-logo"> {% endcomment %}
                         </h3>
                         <p id="menu">
@@ -45,11 +46,11 @@
         </header>
 
 
-    <div class="main" style="display: flex; flex-direction:column; border: 1px solid #222F33; width: min(80%, 700px); margin: auto; padding:0 1rem; border-radius: 5px; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
-        <p style="display: flex; flex-direction: row; width: max-content;"><span style="padding: .75rem; background: #222F33; font-weight: bold; color: white;">BETTER NIGERIA CONFERENCE: </span><span style="padding: .75rem; font-size: .8rem;"> AN ANNUAL NATION BUILDING CONFERENCE SECOND EDITION </span></p>
-        <p  style="display: flex; flex-direction: row; width: max-content;"><span style="padding: .75rem; background: #222F33; font-weight: bold; color: white;">THEME: </span><span style="padding: .75rem; font-size: .8rem;"> CRUSHING CORRUPTION For SIGNIFICANT NATIONAL GROWTH </span></p>
-        <p  style="display: flex; flex-direction: row; width: max-content;"><span style="padding: .75rem; background: #222F33; font-weight: bold; color: white;">Date: 12th December, 2020</span> <span <span style="padding: .75rem; font-size: .8rem;">>Time: 10:00am - 3:00pm</span></p>
-
-        <button type="button" style="background-color: #222F33; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px; width: 30%; margin: auto;"><a href="{% url 'registration' %}">Register</a></button>
+    <div class="main" style="display: flex; flex-direction: column; border: 1px solid #222F33; width: min(80%, 700px); margin: auto; padding: 20px 1rem; border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);"><p><span style="padding: .3rem; background: #222F33; font-weight: bold; color: white;
+    border-radius: 5px;">BETTER NIGERIA CONFERENCE: </span><span style="margin-top: 14px;"> AN ANNUAL NATION BUILDING CONFERENCE SECOND EDITION </span></p>
+        <p><span style="padding: .3rem; background: #222F33; font-weight: bold; color: white; border-radius: 5px;">THEME: </span><span style="margin-top: 14px;"> CRUSHING CORRUPTION FOR SIGNIFICANT NATIONAL GROWTH </span></p>
+        <p><span style="padding: .3rem; background: #222F33; font-weight: bold; color: white; border-radius: 5px;">Date: </span> <span style="margin-top: 14px;"> 12th December, 2020</span> <span style="padding: .3rem; background: #222F33; font-weight: bold; color: white; border-radius: 5px;">Time: </span> <span style="margin-top: 14px;"> 10:00am - 3:00pm</span></p>
+        <button style=" background-color: #222F33; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px; width: 30%; margin: auto;" type="button"><a href="{% url 'registration' %}" style="color: white; margin-left: -12px;">Register</a></button>
     </div> 
 {% endblock %} 
