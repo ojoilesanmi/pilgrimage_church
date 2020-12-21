@@ -31,7 +31,7 @@ SECRET_KEY = env.str('SECRET_KEY')
 DEBUG = int(env.str('DEBUG'))
 
 
-ALLOWED_HOSTS = ['pilgrimmiraclechurch.org', 'herokudjangoapp.herokuapp.com', 'localhost', 'pilgrim-church.herokuapp.com']
+ALLOWED_HOSTS = ['pilgrimmiraclechurch.org','www.pilgrimmiraclechurch.org', 'herokudjangoapp.herokuapp.com', 'localhost', 'pilgrim-church.herokuapp.com','157.230.214.249', ]
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #'cloudinary',
     'pilgrimage_app',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'pilgrimage.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-import dj_database_url
+#import dj_database_url
 
 # 
 
@@ -93,9 +94,15 @@ import dj_database_url
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(default=env.str('DATABASE_URL'))  
-}
- 
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env.str('DB_NAME'),
+        'USER': env.str('DB_USER'),
+        'PASSWORD': env.str('DB_PASSWORD'),
+        'HOST': 'localhost',
+	'PORT': '5432',
+    }
+} 
 
 
 

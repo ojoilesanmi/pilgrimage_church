@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': env.str('NAME'),
         'USER': env.str('USER'),
         'PASSWORD': env.str('PASSWORD'),
-        'HOST': 'localhost'
+        'HOST': 'localhost',
     }
 }
 
