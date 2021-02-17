@@ -1,0 +1,34 @@
+  {% extends 'base.html'%}
+
+  {% block content%}
+  {% load static %}
+  
+   
+                
+            <div class="register">
+                {% include 'partials/_alert.html'%}
+                <form class= "postForm" action="{% url 'registration'%}" method="POST">
+                    <p>Register for Better Nigeria Conference</p>
+                       {% csrf_token %}
+                    <p class="input">
+                        <input placeholder="Full Name" type="text" name="fullname" id="fullname-field" required>
+                    </p>
+                    <p class="input">
+                        <input placeholder="Phone Number" type="text" name="phone_number" id="telephone-field" required>
+                    </p>
+                    <p class="input">
+                        <input placeholder="Email Address" type="email" name="email" id="email-field" required>
+                    </p>
+                    <p>
+                    <p class="checkbox">
+                        <input type="checkbox" name="notify" id="notify">
+                        <label for="notify">I want to be reminded of upcoming events</label>
+                    </p>
+                    <p>
+                        <input class="join" type="submit" value="Register">
+                    </p>
+                </form>
+            </div>            
+        </main> 
+
+{% endblock %}
