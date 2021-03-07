@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponse
 from .models import BetterNigeriaRegistration
 from django.contrib import messages
@@ -16,8 +16,8 @@ def about(request):
 def contact(request):
     return render(request, 'church/contact.html')
     
-def messages(request):
-    return render(request, 'church/messages.html')
+# def messages(request):
+#     return render(request, 'church/messages.html')
 
 def registration(request):
     if request.method == 'POST':
@@ -32,4 +32,14 @@ def registration(request):
     else:
     
         return render(request, 'church/registration.html')
+
+def messages(request):
+    # obj = get_object_or_404(Song, id=id)
+
+    # context = {
+    #     'object': obj,
+    # }
+
+    return render(request, 'church/messages.html')
+
    

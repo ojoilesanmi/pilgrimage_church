@@ -32,6 +32,7 @@ DEBUG = int(env.str('DEBUG'))
 
 
 ALLOWED_HOSTS = ['pilgrimmiraclechurch.org','www.pilgrimmiraclechurch.org', 'herokudjangoapp.herokuapp.com', 'localhost', 'pilgrim-church.herokuapp.com','157.230.214.249', ]
+SESSION_COOKIE_AGE = 3600
 
 
 # Application definition
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     #'cloudinary',
     'pilgrimage_app',
     'payment',
+    'paystack',
 ]
 
 MIDDLEWARE = [

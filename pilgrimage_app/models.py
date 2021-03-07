@@ -10,3 +10,12 @@ class BetterNigeriaRegistration(models.Model):
 
     def __str__(self):
         return self.fullname
+
+class Messages(models.Model):
+    message_title = models.CharField(max_length=256)
+    cloudinary_link = models.URLField(max_length=256)
+    date_released = models.DateTimeField(default=datetime.now)
+    message_image = models.URLField(max_length=256)
+
+    def __str__(self):
+        return self.message_title 
