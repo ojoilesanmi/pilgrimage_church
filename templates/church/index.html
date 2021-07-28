@@ -2,136 +2,147 @@
 
 {% block content%}
 {% load static %}
+<div id="slides" class="carousel slide" data-ride="carousel" data-interval="7000">
 
+    <ul class="carousel-indicators">
 
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
 
-    <div class="app">
-        <!-- <img src="./image/bg-img-praying.jpg" alt="bg-image"> -->
-        <header>            
-            <div class="bg-image">
-                <img src="{% static 'img/image-5.jpg'%}" alt="header-bg">
-            </div>         
+    </ul>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active" style="background-image: url(rgc_folder/slider2-min.jpg); background-position: center;  background-repeat: no-repeat;  background-size: cover;">
+            <div class="carousel-caption text-center">
+                <h3>Welcome to</h3>
+                <h1>Pilgrim Miracle <br> Centre</h1>
+                <a class="btn btn-outline-light btn-lg" href="{% url 'about' %}">Learn More</a>
+            </div>
+        </div>
+        <div class="carousel-item " style="background-image: url(rgc_folder/slider3-min.jpg);">
+            <div class="carousel-caption text-center">
+                <h3>A Church Fellowship</h3>
+                <h1>Where Everybody is Somebody <br> And Jesus Christ Is Lord.</h1>
+                <a class="btn btn-outline-light btn-lg" href="{% url 'ministries' %}">Learn More</a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(static/img/image-9.jpg);">
+            <div class="carousel-caption text-center">
+                <h3>Worship With Us</h3>
+                <h1>This and Every Sunday</h1>
+                <a class="btn btn-outline-light btn-lg" href="church.html">Learn More</a>
+            </div>
+        </div>
 
-            <section class="header-texts" style="padding-top: 1rem;">
-                <nav style="padding-top: 1rem;">
-                    <div class="logo">
-                        <h3 style="border: 2px solid teal;
-                                padding: 0.38rem;
-                                border-radius: 5px;">
-                            PMC
-                            {% comment %} <img src="{% static 'img/logo.jpg'%}" alt="church-logo"> {% endcomment %}
-                        </h3>
-                        <p id="menu">
-                            <img src="{% static 'img/icon-hamburger.svg'%}" alt="menu">
-                        </p>                
-                    </div>
-    
-                    <ul class="open-nav">
-                        <li>
-                            <a href="{% url 'about'%}">About us</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'contact'%}">Contact us</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'better_nigeria' %}">Better Nigeria</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'messages' %}">Messages</a>
-                        </li>
-                        <li class="close-container">
-                            <img class="" src="{% static 'img/icon-close.svg'%}" alt="close" id="close">
-                        </li>              
-                            
-                    </ul>
-                </nav>
-                <div class="top-text">
-                    <p>
-                        Worship Center
-                    </p>
-                    <p>
-                        Always a reason to Serve the Lord, 
-                        Join us as we  experience High Worship of Praise.
-                    </p>
-                </div>
-                
-        </section>
-</header>
+</div>
+
+<!--founders Welcome Address-->
+<div style="margin-top: 50px;" class="container padding">
+
+    <div class="row jumbotron">
+        <div id="welcome" class=" col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+            <img class="card-img-top" src="{% static 'img/image-3.jpg' %}" alt="founders_Image">
+        </div>
+        <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h1 class="welcome_header bana display-4 "> Welcome to </h1>
+            <h2  class="welcome_header2 display-4"> Pilgrim Miracle Centre  </h2>
+            <p  class="para ">Praise the Lord Brethren, Greeting to you and your Family. </p> 
+            <p  class="para ">We wish you God’s blessings and grace as PMC family . </p> 
+            <p class="para ">Our prayer for you is that the God of all grace anoints you with fresh oil and His precious Spirit illuminates your mind in understanding God’s perfect will for your life by His Spirit.</p>
         
-    
-        <main>
-            <section class="top">
-                <div class="text">
-                    <h2>Mission</h2>
-                    <p>
-                        Raising the total man, set him in order and see the glory of God revealed in him
-                    </p>
-                    <button class="join"><a href="{% url 'registration'%}">join</a></button>
-                </div>
-                <div class="hide-mobile">
-                    <div class="image">
-                        <img src="{% static 'img/image-3.jpg'%}" alt="church image">
-                    </div>
-                </div>
-            </section>
-            <section class="mid">                
-                <div class="hide-mobile">
-                    <div class="image">
-                        <img src="{% static 'img/image-1.jpg'%}" alt="church image">
-                    </div>
-                </div>
-                <div class="mid-text">
-                    <p>The experience</p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Perferendis vero, 
-                        asperiores excepturi at temporibus tenetur
-                        fuga atque voluptate officia, culpa obcaecati,
-                        quia vitae ab inventore quas praesentium 
-                        similique dicta ullam.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Mollitia sint dolorem 
-                        ratione! Ipsam commodi accusamus explicabo 
-                        quam quod dicta aperiam culpa eum reiciendis 
-                        necessitatibus, amet architecto voluptatem 
-                        voluptates fugit nostrum!
-                    </p>
-                </div>
-            </section>
-            <section class="bottom">
-                <div class="details">
-                    <ul>
-                        <li>
-                            <p>Address</p>
-                            <p>33, Oremeji Street, Off Ososami, Oke Ado, Ibadan Oyo State.</p>
-                        </li>
-                        <li>
-                            <p>Sunday Service</p>
-                            <p>First Service: 9:00am - 10:30am, Second Service: 10:30am - 12:00pm</p>
-                        </li>
-                        <li>
-                            <p>Power Encounter </p>
-                            <p>1st, 2nd and 3rd day of the month</p>
-                        </li>
-                        <li>
-                            <p>Midweek Service </p>
-                            <p>33, Oremeji Street, Off Ososami, Oke Ado, Ibadan Oyo State.</p>
-                        </li>
-                        <li>
-                            <p>Vigil </p>
-                            <p>Miracle Night 11pm - 3am</p>
-                        </li>
-                    </ul>
-                </div>                
-                <div class="hide-mobile">
-                        <div class="image">
-                            <img src="{% static 'img/image-6.jpg'%}" alt="church image">
-                        </div>
-                    </div>
-            </section>
-        </main>
-           
-    </div>    
+            <p  class="para ">May the Lord empower you to effectively communicate to others the vibrant hope that He has given you as a believer.</p>
+            <p  class="para ">May He cause you to persevere and cause you to overcome every struggle and challenge you may be encountering in Jesus name. Remember in all things you remain to be more than a conqueror. We welcome you to the family of LCC.</p>
+            <p class="para ">Feel free and share or recommend our page to your friends and network so that they can be blessed through this ministry.</p>
+        
+        </div>
+    </div>
+</div>
+
+<!--church card-->
+<div class="container padding">
+    <div class="row padding">
+        <div class="col-xs-12 col-sm-12 col-md-4 ">
+            <div class="card">
+            <img class="card-img-top" src="{% static 'img/image-2.jpg' %}" alt="">
+            <div class="card-body">
+                <h3 class="card-title">Our Church Ministries</h3>
+                <p class="card-text "> Liberty Christian Centre is split into various Ministerial departments which together form the church structure…</p>
+                <a href="ministries.html" class="btn btn-outline-secondary">READ MORE</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 ">
+            <div class="card">
+            <img class="card-img-top" src="{% static 'img/image-3.jpg' %}" alt="">
+            <div class="card-body">
+                <h3 class="card-title">Join a Church Group</h3>
+                <p class="card-text "> At The Redeemed Gospel Church (RGC-LCC), our prayer for you is that the God of all grace anoints you with…</p>
+                <a href="ministries.html" class="btn btn-outline-secondary">READ MORE</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 ">
+            <div class="card">
+            <img class="card-img-top" src="{% static 'img/image-4.jpg' %}" alt="">
+            <div class="card-body">
+                <h3 class="card-title">About Our Church</h3>
+                <p class="card-text "> Liberty Christian Centre was officially launched in 1999. The Senior Pastor; Bishop Dr. Kepha Omae took a bold…</p>
+                <a href="About.html" class="btn btn-outline-secondary">READ MORE</a>
+            </div>
+            </div>
+        </div>
+       
+        
+    </div>
+</div>
+
+<!--banner-->
+<div class="container padding">
+    <div class="row text-center text-danger">
+        <div class="col-12">
+            <h1 style="padding-top: 50px;" class="display-2 banner ">PICTORIAL SUMMARY OF OUR SERVICE</h1>
+        </div>
+    </div>
+</div>
+<!--image gallery-->
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-5.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-6.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-7.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-1.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-2.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-3.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-4.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-5.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-6.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-7.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-3.jpg' %}" alt=""></div>
+        <div class="col-md-3 col-6 my-3"><img class="card-img-top" src="{% static 'img/image-1.jpg' %}" alt=""></div>
+
+    </div>
+</div>
+
+<!--Google map-->
+<div class="container">
+    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1978.437654018742!2d3.8772310584328!3d7.367870776202742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s33%20Oremeji%20Street%2C%20behind%20Conac%20optical%2C%20Ososami%2C%20Oke%20ado%2C%20Ibadan.!5e0!3m2!1sen!2sng!4v1627161259204!5m2!1sen!2sng" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  </div>
+</div>
+
+<!--social media icons-->
+<div class="container-fluid padding">
+    <div class="row padding text-center">
+        <div class="col-12 social padding">
+            <a href="#" ><i class="fab fa-facebook"></i></a>
+            <a href="#" ><i class="fab fa-youtube"></i></a>
+            <a href="#" ><i class="fab fa-twitter"></i></a>
+            <a href="#" ><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </div>
+</div>
+
+
+  
 {% endblock %}

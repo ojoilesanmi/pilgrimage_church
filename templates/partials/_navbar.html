@@ -1,2 +1,36 @@
 {% load static %}
-{% comment %}  {% endcomment %}
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" >
+    <div class="container">
+
+        <!-- Brand -->
+        <a href="index.html" class="navbar-brand"><img  alt="PMC" src="{% static 'img/logo.jpg' %}"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+          <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarResponsive" >
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">HOME</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'church' %}">CHURCH SERVICES</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'messages' %}">SERMONS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'ministries' %}">MINISTRIES</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">CONTACTS</a>
+                </li>
+            </ul>
+
+        </div> 
+    </div>
+</nav>

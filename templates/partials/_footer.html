@@ -1,6 +1,50 @@
 {% load static %}
 <footer>
-    <p title="email">pastor@pilgrimmiraclechurch.org</p>
-        <!-- <p><img src="./image/logo.svg" alt="church-logo"></p> -->
-    <p><button class="join"><a href="{% url 'registration'%}">join</a></button></p>
-</footer>  
+
+    <div class="container padding">
+   <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+       <nav class="navbar navbar-expand-md navbar-light bg-light" id="footer-nav" >
+            <ul class="navbar-nav text-center">
+               <li class="nav-item ">
+                   <a class="nav-link" href="{% url 'about' %}">About Us</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="{% url 'church' %}">Church Services</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="{% url 'messages' %}">Sermons</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="#">Privacy Policy</a>
+               </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="{% url 'contact' %}">Contacts</a>
+                </li>
+           </ul> 
+       </nav>
+       
+   </div>
+</div>
+
+</footer>
+
+  
+   <div class="container-fluid">
+
+       <div class="col-12 text-center">
+           <hr class="dark">
+           <h5>RGC - LCC. Copyright &copy All rights reserved.</h5>
+       </div>
+
+   </div>
+   <!--back to top icon-->
+   <a id="back-to-top" href="#" class="btn btn-outline-danger btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+   <!--whatsapp chat-->
+   <a href="https://api.whatsapp.com/send?phone=7310747066&text=Hola%information%." class="float1" target="_blank">
+       <i class="fab fa-whatsapp my-float"></i>
+   </a>
+   <a id="chat_btn" href="#" type="button" class=" btn btn-outline-light btn-lg">
+       <i>Need Help? Chat with Us</i>
+   </a>
+   

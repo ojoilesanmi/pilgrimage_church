@@ -19,3 +19,14 @@ class Messages(models.Model):
 
     def __str__(self):
         return self.message_title 
+
+class Contact(models.Model):
+    fullname = models.CharField(max_length=200)
+    email = models.CharField(max_length=50)
+    message = models.TextField(blank=False)
+    phone = models.CharField(max_length=11)
+    contact_date = models.DateTimeField(default=datetime.now, blank=False)
+
+
+    def __str__(self):
+        return self.fullname
