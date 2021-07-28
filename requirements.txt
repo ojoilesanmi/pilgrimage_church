@@ -17,7 +17,6 @@ heroku==0.1.4
 idna==2.10
 marshmallow==3.8.0
 Paperboy==1.0.1
-pkg-resources==0.0.0
 psycopg2==2.8.6
 psycopg2-binary==2.8.6
 -e git+https://github.com/gbozee/django-paystack.git@24df1c9ca209031e0ec940ff8552d45ca6b55421#egg=pypaystack
