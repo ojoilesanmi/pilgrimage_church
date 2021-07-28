@@ -38,14 +38,14 @@ def registration(request):
     
         return render(request, 'church/registration.html')
 
-def messages(request):
+def sermon(request):
     # obj = get_object_or_404(Song, id=id)
 
     # context = {
     #     'object': obj,
     # }
 
-    return render(request, 'church/messages.html')
+    return render(request, 'church/sermon.html')
 
 def contact(request):
     if request.method == 'POST':
