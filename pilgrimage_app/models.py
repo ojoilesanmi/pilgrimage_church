@@ -20,6 +20,7 @@ class Messages(models.Model):
     def __str__(self):
         return self.message_title 
 
+
 class Contact(models.Model):
     fullname = models.CharField(max_length=200)
     email = models.CharField(max_length=50)

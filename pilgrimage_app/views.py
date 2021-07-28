@@ -14,8 +14,6 @@ def better_nigeria(request):
 def about(request):
     return render(request, 'church/about.html')
 
-def contact(request):
-    return render(request, 'church/contact.html')
 
 def ministries(request):
     return render(request, 'church/ministries.html')
@@ -49,18 +47,18 @@ def messages(request):
 
     return render(request, 'church/messages.html')
 
-def contact_us(request):
+def contact(request):
     if request.method == 'POST':
         fullname = request.POST['fullname']
-        email = request.POST['email']
         phone = request.POST['phone']
+        email = request.POST['email']
         message = request.POST['message']
-    
-        
-        contact = Contact(fullname=fullname, email=email, phone=phone, message=message)
+
+        contact = Contact(fullname=fullname, phone=phone, email=email, message=message)
         contact.save()
         messages.success(request, 'You have succesfully submitted your message. We will be in touch with you shortly')
-
-        return redirect('index')
+        return redirect('contact')
+    else:
+        return render(request, 'church/contact.html')
 
    
