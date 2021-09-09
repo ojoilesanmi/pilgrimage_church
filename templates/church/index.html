@@ -12,14 +12,14 @@
 
     </ul>
     <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active" style="background-image: url(rgc_folder/slider2-min.jpg); background-position: center;  background-repeat: no-repeat;  background-size: cover;">
+        <div class="carousel-item active" style="background-image: url(static/img/image-3.jpg); background-position: center;  background-repeat: no-repeat;  background-size: cover;">
             <div class="carousel-caption text-center">
                 <h3>Welcome to</h3>
                 <h1>Pilgrim Miracle <br> Centre</h1>
                 <a class="btn btn-outline-light btn-lg" href="{% url 'about' %}">Learn More</a>
             </div>
         </div>
-        <div class="carousel-item " style="background-image: url(rgc_folder/slider3-min.jpg);">
+        <div class="carousel-item " style="background-image: url(static/img/image-9.jpg);">
             <div class="carousel-caption text-center">
                 <h3>A Church Fellowship</h3>
                 <h1>Where Everybody is Somebody <br> And Jesus Christ Is Lord.</h1>
@@ -30,7 +30,7 @@
             <div class="carousel-caption text-center">
                 <h3>Worship With Us</h3>
                 <h1>This and Every Sunday</h1>
-                <a class="btn btn-outline-light btn-lg" href="church.html">Learn More</a>
+                <a class="btn btn-outline-light btn-lg" href="{% url 'church' %}">Learn More</a>
             </div>
         </div>
 
@@ -45,14 +45,19 @@
         </div>
         <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <h1 class="welcome_header bana display-4 "> Welcome to </h1>
-            <h2  class="welcome_header2 display-4"> Pilgrim Miracle Centre  </h2>
-            <p  class="para ">Praise the Lord Brethren, Greeting to you and your Family. </p> 
-            <p  class="para ">We wish you God’s blessings and grace as PMC family . </p> 
-            <p class="para ">Our prayer for you is that the God of all grace anoints you with fresh oil and His precious Spirit illuminates your mind in understanding God’s perfect will for your life by His Spirit.</p>
+            <h2  class="welcome_header2 display-4"> Pilgrim Miracle Church & Abundant Prayer and Evangelistic Ministries </h2>
+            <p  class="para "> I am thrilled to welcome all visitors to this website.</p> 
+            <p  class="para ">Many years ago, the Lord spoke to me that He wanted me to start spreading abroad the message of Salvation and Deliverance by which He graciously saved and delivered me from the power of the wicked one. </p> 
+            <p class="para ">He instructed me with the following clear cut words “Preach Holiness; Declare My Praise; Destroy Idolatry: Set My People in order and with them produce the Total Man”. </p>
         
-            <p  class="para ">May the Lord empower you to effectively communicate to others the vibrant hope that He has given you as a believer.</p>
-            <p  class="para ">May He cause you to persevere and cause you to overcome every struggle and challenge you may be encountering in Jesus name. Remember in all things you remain to be more than a conqueror. We welcome you to the family of LCC.</p>
-            <p class="para ">Feel free and share or recommend our page to your friends and network so that they can be blessed through this ministry.</p>
+            <p  class="para ">Over the years, we have these four cardinal points for building the body of knowledge that God has been revealing to us from the whole Bible.</p>
+            <p  class="para ">You, with us, are on an adventure with God as you decide to visit us on this website, follow and or worship with us in this Amazing Ministry. </p>
+            <p class="para ">You are welcome to enjoy with us the life of holiness that God makes available to us, through our Lord Jesus Christ.It is a major connecting point that makes possible a lasting relationship between the Creator and mortal men, for ‘Without holiness no one will see the Lord’ (Heb. 12:14b NIRV).</p>
+            <p class="para ">Join with us as we ‘Declare God’s Praise’. No one else deserves to be praised. When we celebrate the Praise of God in the congregation of God’s people, the end result is God releases His glory among His people, and this Glory, God will share with no other person. God Himself declares: ‘I AM the Lord: that is My Name: and My Glory will I not give to another, neither My Praise to graven images’ (Isaiah 42:8 KJV).</p>
+            <p class="para ">You are welcome to join us, to ‘Destroy Idolatry’. God hates idolatry in all its forms. He Himself commanded the children of Israel: “Be careful not to make a treaty with the inhabitants of the land you are entering, lest they become a snare in your midst. Rather, you must tear down their altars, smash their sacred stones, and chop down their Asherah poles” (Exo. 34:12-13. NIV).</p>
+            <p class="para ">In concluding the writing on the manifestation of the gifts of the Spirit during church service, the Apostle Paul concludes with the statement “Let all things be done decently and in order” (1 Corin. 14:40 KJV). “Set My people in order” comes from the expected manner of comportment of church peoplein relation with being orderly before the Person of the Holy Spirit. It is the same Holy Spirit, who will work on men to make them to take after Christ, the ‘Perfect Man’.</p>
+            
+
         
         </div>
     </div>
@@ -67,7 +72,7 @@
             <div class="card-body">
                 <h3 class="card-title">Our Church Ministries</h3>
                 <p class="card-text "> Liberty Christian Centre is split into various Ministerial departments which together form the church structure…</p>
-                <a href="ministries.html" class="btn btn-outline-secondary">READ MORE</a>
+                <a href="{% url 'ministries'%}" class="btn btn-outline-secondary">READ MORE</a>
             </div>
             </div>
         </div>
@@ -77,7 +82,7 @@
             <div class="card-body">
                 <h3 class="card-title">Join a Church Group</h3>
                 <p class="card-text "> At The Redeemed Gospel Church (RGC-LCC), our prayer for you is that the God of all grace anoints you with…</p>
-                <a href="ministries.html" class="btn btn-outline-secondary">READ MORE</a>
+            <a href="{% url 'ministries' %}" class="btn btn-outline-secondary">READ MORE</a>
             </div>
             </div>
         </div>
@@ -87,7 +92,7 @@
             <div class="card-body">
                 <h3 class="card-title">About Our Church</h3>
                 <p class="card-text "> Liberty Christian Centre was officially launched in 1999. The Senior Pastor; Bishop Dr. Kepha Omae took a bold…</p>
-                <a href="About.html" class="btn btn-outline-secondary">READ MORE</a>
+                <a href="{% url 'about' %}" class="btn btn-outline-secondary">READ MORE</a>
             </div>
             </div>
         </div>
